@@ -1,4 +1,4 @@
-module go-power-manager
+module GoPowerManager
 
 go 1.16
 
