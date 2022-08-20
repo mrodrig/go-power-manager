@@ -6,6 +6,7 @@ import (
 
 	"fyne.io/fyne"
 	"fyne.io/fyne/app"
+	"fyne.io/fyne/layout"
 	"fyne.io/fyne/widget"
 )
 
@@ -42,17 +43,9 @@ func main() {
 		app.Quit()
 	})
 
-	// Resize them all to a consistent size
-	shutdownButton.Resize(fyne.NewSize(250, 80))
-	rebootButton.Resize(fyne.NewSize(250, 80))
-	hibernateButton.Resize(fyne.NewSize(250, 80))
-	quitButton.Resize(fyne.NewSize(250, 80))
-
 	// Setup the GUI layout
-	window.SetContent(widget.NewVBox(
-		widget.NewHBox(shutdownButton, rebootButton),
-		widget.NewHBox(hibernateButton, quitButton),
-	))
+	window.SetContent(fyne.NewContainerWithLayout(layout.NewAdaptiveGridLayout(2), shutdownButton, rebootButton, hibernateButton, quitButton))
+	window.Resize(fyne.NewSize(400, 200))
 
 	// Show the interface
 	window.ShowAndRun()
