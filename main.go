@@ -28,11 +28,11 @@ func main() {
 
 	// Create buttons
 	shutdownButton := widget.NewButton("Shutdown", func() {
-		var flags = []string{"/s", "/f"}
+		var flags = []string{"/s", "/f", "/t", "0"}
 		runCommand(flags)
 	})
 	rebootButton := widget.NewButton("Reboot", func() {
-		var flags = []string{"/r", "/f"}
+		var flags = []string{"/r", "/f", "/t", "0"}
 		runCommand(flags)
 	})
 	hibernateButton := widget.NewButton("Hibernate", func() {
