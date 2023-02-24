@@ -10,5 +10,5 @@ require (
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/stretchr/testify v1.7.2 // indirect
 	golang.org/x/image v0.0.0-20220601225756-64ec528b34cd // indirect
-	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
+	golang.org/x/net v0.7.0 // indirect
 )
